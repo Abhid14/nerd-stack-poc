@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate-neo4j-types": "vite-node ./neo4j/generate-types.ts",
     "dev": "next dev",
+    "dev:with-types": "npm-run-all -s generate-neo4j-types dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@neo4j/graphql-ogm": "^5.9.1",
+    "graphql-tag": "^2.12.6",
+    "neo4j-driver": "^5.26.0",
+    "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "next": "15.0.2"
+    "vite-node": "^2.1.4"
   },
   "devDependencies": {
     "typescript": "^5",
